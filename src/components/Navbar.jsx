@@ -41,7 +41,7 @@ const Navbar = () => {
  </>
   
   return (
-    <div className="navbar bg-base-100 mt-5 md:px-24 font-lobister">
+    <div className="navbar bg-base-100 mt-5  font-lobister">
   <div className="flex-1">
     <Link to={"/"} className=" text-3xl  font-bold">Draw<span className="text-[#206463b1]">Nest</span></Link>
   </div>
