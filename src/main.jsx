@@ -9,7 +9,6 @@ import Root from './Root.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,13 +18,15 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<HomePage></HomePage>
-      }
+      },
+     
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+
+   <RouterProvider router={router} />
+  </React.StrictMode>
 )
