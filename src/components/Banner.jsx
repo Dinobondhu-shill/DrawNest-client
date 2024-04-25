@@ -7,7 +7,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 
 const Banner = () => {
   return (
-    <div className='mt-10 object-cover'>
+    <div className='mt-10 object-cover px-24'>
       <Swiper className=' h-[300px] md:h-[400px] lg:h-[510px] rounded-md'
       modules={[Pagination, Autoplay]}
       spaceBetween={50}
