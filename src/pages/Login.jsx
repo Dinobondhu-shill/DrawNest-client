@@ -19,8 +19,9 @@ const [showPassword, setShowPassword] = useState(false);
     formState: { errors },
   } = useForm();
   return (
-    <div>
-      <div className='bg-[rgb(221,208,208)] mx-52 mt-10 px-10 py-6 rounded-sm text-center'>
+    <div className='relative'>
+      <img src={photowave} alt="" className='max-h-72 w-full rotate-180'/>
+      <div className='bg-transparent absolute top-0 left-0 mx-52 mt-10 px-10 py-6 rounded-sm text-center'>
       <h2 className='font-dancing text-5xl py-3'>Welcome back to <span className='font-lobister text-7xl'>DrawNest</span></h2> <hr />
       <div className='my-10 flex justify-between w-full'> 
         <img src={photo} alt="" />
@@ -47,9 +48,9 @@ className=" flex flex-col gap-3">
 </label>
 {errors.Password && <span className="text-red-700 font-bold">You must enter your Email</span>}
 
-<button  data-aos="zoom-in" type="submit" className=" border font-lobister text-black py-3 rounded-xl font-bold hover:bg-[#206463b1]">Log In</button>
+<button  data-aos="zoom-in" type="submit" className=" border font-lobister text-white py-3 rounded-xl font-bold bg-[#206463b1]">Log In</button>
 </form>
-<p data-aos="fade-left" className="mt-4 text-[16px] pb-4">Don't have an account? <Link to={'/register'} className="underline  text-[#a456a4]">Register</Link></p> <hr />
+<p data-aos="fade-left" className="mt-4 text-[16px] pb-4">Don't have an account? <Link to={'/register'} className="underline  text-[#51cebf]">Register</Link></p> <hr />
 <h2 data-aos="fade-right" className="font-bold mt-4">Or Continue With:</h2>
 <div className="flex justify-between mt-4 ju">
 <button

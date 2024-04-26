@@ -9,6 +9,8 @@ import Root from './Root.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
+import { HelmetProvider } from 'react-helmet-async'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
     {
       path:"/login",
       element:<Login></Login>
+    }, 
+    {
+      path:"/register",
+      element:<Register></Register>
     }
     ]
   },
@@ -31,6 +37,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
+   <HelmetProvider>
    <RouterProvider router={router} />
+   </HelmetProvider>
   </React.StrictMode>
 )
