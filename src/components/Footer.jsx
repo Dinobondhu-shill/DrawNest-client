@@ -2,7 +2,7 @@ import video from '../../public/drawing.mp4'
 
 const Footer = () => {
   return (
-    <div >
+    <div className='bg-[#42C8C6]'>
       <footer className="footer p-10 flex justify-between font-fajila">
   <aside>
     
@@ -29,7 +29,7 @@ const Footer = () => {
     <a className="link link-hover">Cookie policy</a>
   </nav>
 </footer> <hr />
-<footer className="footer  p-4 mb-10">
+<footer className="footer  p-4 pb-10">
   <aside className="items-center grid-flow-col">
     
     <p>Copyright © 2024 - All right reserved for <span className="font-bold">DrawNest</span></p>

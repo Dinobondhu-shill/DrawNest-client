@@ -67,8 +67,8 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-    <Link data-aos="fade-up-left" to={'/login'} className="btn bg-[#206463b1] text-white ml-2 font-bold hover:bg-[#64204db1]">Log In</Link>
-        <Link data-aos="fade-up-left" to={'/register'} className="btn bg-[#206463b1] text-white  font-bold hover:bg-[#64204db1]">Sign Up</Link>
+    <Link data-aos="fade-up-left" to={'/login'} className="btn bg-[#206463b1] text-white ml-2 font-bold hover:bg-[#2e6261be]">Log In</Link>
+        <Link data-aos="fade-up-left" to={'/register'} className="btn bg-[#206463b1] text-white  font-bold hover:bg-[#2e6261be]">Sign Up</Link>
   </div>
 </div>
   );
