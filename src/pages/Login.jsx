@@ -11,7 +11,7 @@ import photowave from '../../public/Wave.svg'
 import { AuthContext } from '../firebase/FirebaseProvider';
 
 const Login = () => {
-  const {signIn} = useContext(AuthContext)
+  const {signIn, googleLogin, githubLogin, facebookLogin} = useContext(AuthContext)
 const [showPassword, setShowPassword] = useState(false);
 const [login, setLogin] = useState('')
 const [loginErr, setLoginErr] = useState('')
@@ -36,6 +36,7 @@ const location = useLocation();
         setLoginErr('Email or Password is not correct')
       })
   }
+
   return (
     <div className='relative'>
       <img src={photowave} alt="" className='max-h-72 w-full rotate-180'/>
@@ -78,11 +79,11 @@ className=" flex flex-col gap-3">
 <p data-aos="fade-left" className="mt-4 text-[16px] pb-4">Don't have an account? <Link to={'/register'} className="underline  text-[#51cebf]">Register</Link></p> <hr />
 <h2 data-aos="fade-right" className="font-bold mt-4">Or Continue With:</h2>
 <div className="flex justify-between mt-4 ju">
-<button
+<button onClick={()=> googleLogin()}
  className="text-4xl"> <FcGoogle /> </button>
-<button
+<button onClick={()=> githubLogin()}
  className="text-4xl"> <FaGithub /> </button>
-<button
+<button onClick={()=> facebookLogin()}
  className="text-4xl"> <SiFacebook /> </button>
 </div>
         </div>
