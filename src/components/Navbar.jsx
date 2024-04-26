@@ -26,7 +26,7 @@ console.log(user);
     };
   }}>Art & Craft Item</NavLink>
   {
-    user && <NavLink to={'/'}
+    user && <NavLink to={"/add-item"}
     style={({ isActive,}) => {
       return {
         fontWeight: isActive ? "bold" : "",

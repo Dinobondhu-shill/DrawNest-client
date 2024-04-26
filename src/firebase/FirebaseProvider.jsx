@@ -1,7 +1,8 @@
 import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext,  useEffect, useState } from "react";
 import auth from "./firebase.config";
-import { toast } from "react-toastify";
+import swal from 'sweetalert';
+
 
 export const AuthContext = createContext(null);
 const googleProvider = new GoogleAuthProvider();
@@ -10,7 +11,7 @@ const facebookProvider = new FacebookAuthProvider()
 
 const FirebaseProvider = ({children}) => {
   const [user, setUser] = useState(null)
-
+ 
 // create User with email and password
 const createUser = (email, password)=>{
   return createUserWithEmailAndPassword(auth, email, password)
@@ -27,10 +28,12 @@ const createUser = (email, password)=>{
   // Sign in user
   const signIn =(email, password) =>{
    return signInWithEmailAndPassword(auth, email, password)
+   
   }
   // google sign in
   const googleLogin = ()=>{
    return signInWithPopup(auth, googleProvider)
+   
   }
   // github Provider
   const githubLogin = ()=>{
@@ -44,7 +47,7 @@ const facebookLogin =() =>{
   const logOut = ()=>{
     signOut(auth)
     .then(()=>{
-      toast.success('sign out successfully')
+      swal('sign out successful')
     })
   }
 

@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import photo from '../../public/Wave.svg'
 import { useForm } from 'react-hook-form';
 import { Helmet } from 'react-helmet-async';
 import { useContext, useState } from 'react';
 import { IoIosEye, IoIosEyeOff } from 'react-icons/io';
 import { ToastContainer, toast } from 'react-toastify';
-
+import swal from 'sweetalert';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../firebase/FirebaseProvider';
 
@@ -14,20 +14,22 @@ const Register = () => {
   const {register,
     handleSubmit,
     formState: { errors },watch, } = useForm();
-
+    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const [registerError, setRegisterError] = useState('');
     const [successRegister, setSuccessRegister] = useState('')
     const {createUser} = useContext(AuthContext);
   
-
+    const password = watch("Password");
     const onSubmit = data =>{
       console.log(data.email);
       createUser(data.email, data.Password)
       .then(user =>{
         setSuccessRegister('User Created Successfully')
       toast.success('Register Successful')
-        console.log(user)
+      swal("Registration Successfull");
+      
+      navigate('/')
       })
       .catch((error)=>{
         setRegisterError("Something went wrong")
@@ -118,7 +120,7 @@ const Register = () => {
           <h5 className="font-bold text-lg pl-2">Confirm Password:</h5>
           <input
             {...register("confirmPassword", {
-              // validate: (value) => value === password || "Passwords do not match",
+              validate: (value) => value === password || "Passwords do not match",
             })}
             type="password"
             placeholder="Confirm Your Password"

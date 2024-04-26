@@ -9,6 +9,11 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import photowave from '../../public/Wave.svg'
 import { AuthContext } from '../firebase/FirebaseProvider';
+import swal from 'sweetalert';
+
+
+
+
 
 const Login = () => {
   const {signIn, googleLogin, githubLogin, facebookLogin} = useContext(AuthContext)
@@ -27,14 +32,21 @@ const location = useLocation();
   const onSubmit= data =>{
     signIn(data.Email, data.Password)
     .then(result=>{
-      toast.success('Log in success')
       setLogin('Log in Successfully')
       navigate(location?.state || '/')
+      swal("You are now logged in")
     })
       .catch(error=>{
         console.log(error)
         setLoginErr('Email or Password is not correct')
       })
+  }
+
+  const handleSocailLogin = socialProvider =>{
+    socialProvider ()
+    .then((result)=>{
+      navigate(location?.state || '/')
+    })
   }
 
   return (
@@ -79,11 +91,11 @@ className=" flex flex-col gap-3">
 <p data-aos="fade-left" className="mt-4 text-[16px] pb-4">Don't have an account? <Link to={'/register'} className="underline  text-[#51cebf]">Register</Link></p> <hr />
 <h2 data-aos="fade-right" className="font-bold mt-4">Or Continue With:</h2>
 <div className="flex justify-between mt-4 ju">
-<button onClick={()=> googleLogin()}
+<button onClick={()=>  handleSocailLogin(googleLogin)}
  className="text-4xl"> <FcGoogle /> </button>
-<button onClick={()=> githubLogin()}
+<button onClick={()=> handleSocailLogin(githubLogin)}
  className="text-4xl"> <FaGithub /> </button>
-<button onClick={()=> facebookLogin()}
+<button onClick={()=> handleSocailLogin(facebookLogin)}
  className="text-4xl"> <SiFacebook /> </button>
 </div>
         </div>

@@ -12,6 +12,8 @@ import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import { HelmetProvider } from 'react-helmet-async'
 import FirebaseProvider from './firebase/FirebaseProvider.jsx'
+import PrivateRoute from './pages/PrivateRoute.jsx'
+import AddArtAndCraft from './pages/AddArtAndCraft.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,12 @@ const router = createBrowserRouter([
     {
       path:"/register",
       element:<Register></Register>
+    },
+    {
+      path:"/add-item",
+      element: <PrivateRoute>
+      <AddArtAndCraft></AddArtAndCraft>
+      </PrivateRoute>
     }
     ]
   },
