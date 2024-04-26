@@ -1,23 +1,41 @@
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import photo from '../../public/Humaaans - 1 Character.png'
 import { useForm } from "react-hook-form";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { IoIosEye, IoIosEyeOff } from 'react-icons/io';
 import { SiFacebook } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import photowave from '../../public/Wave.svg'
+import { AuthContext } from '../firebase/FirebaseProvider';
 
 const Login = () => {
-  
+  const {signIn} = useContext(AuthContext)
 const [showPassword, setShowPassword] = useState(false);
+const [login, setLogin] = useState('')
+const [loginErr, setLoginErr] = useState('')
+const navigate = useNavigate();
+const location = useLocation();
 
   const {
     register,
-    // handleSubmit,
+    handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const onSubmit= data =>{
+    signIn(data.Email, data.Password)
+    .then(result=>{
+      toast.success('Log in success')
+      setLogin('Log in Successfully')
+      navigate(location?.state || '/')
+    })
+      .catch(error=>{
+        console.log(error)
+        setLoginErr('Email or Password is not correct')
+      })
+  }
   return (
     <div className='relative'>
       <img src={photowave} alt="" className='max-h-72 w-full rotate-180'/>
@@ -27,6 +45,7 @@ const [showPassword, setShowPassword] = useState(false);
         <img src={photo} alt="" />
         <div className='border-l ml-20 flex flex-col w-1/2 pl-16'>
         <form
+        onSubmit={handleSubmit(onSubmit)}
 className=" flex flex-col gap-3">
 <label data-aos="fade-down" data-os-duration="1000" className="input input-bordered flex items-center gap-2">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
@@ -46,10 +65,16 @@ className=" flex flex-col gap-3">
         }
           </span>
 </label>
-{errors.Password && <span className="text-red-700 font-bold">You must enter your Email</span>}
+{errors.Password && <span className="text-red-700 font-bold">You must enter your Password</span>}
 
 <button  data-aos="zoom-in" type="submit" className=" border font-lobister text-white py-3 rounded-xl font-bold bg-[#206463b1]">Log In</button>
 </form>
+{
+  login && <span className="text-bold text-green-600 mt-5">{login}</span>
+}
+{
+  loginErr && <span className="text-bold text-red-600 mt-5">{loginErr}</span>
+}
 <p data-aos="fade-left" className="mt-4 text-[16px] pb-4">Don't have an account? <Link to={'/register'} className="underline  text-[#51cebf]">Register</Link></p> <hr />
 <h2 data-aos="fade-right" className="font-bold mt-4">Or Continue With:</h2>
 <div className="flex justify-between mt-4 ju">
