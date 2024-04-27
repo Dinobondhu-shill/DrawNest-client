@@ -18,7 +18,7 @@ const AllCraftSection = () => {
         <title>All Art & Craft Gallery | DrawNest</title>
       </Helmet>
       <div  className='px-24 my-10'>
-      <h3 className='text-3xl font-fajila'>Take a Look</h3>
+      <h3 className='text-3xl font-fajila'>Take a Look Our All Collections</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
       {
         items.map(item => <ArtAndCraftCard key={item._id} item={item}></ArtAndCraftCard>)

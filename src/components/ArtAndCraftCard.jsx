@@ -13,7 +13,7 @@ const ArtAndCraftCard = ({item}) => {
       <div>
         <img src={image} alt="" className="w-full max-h-[300px] object-cover "/>
       </div>
-      <h3 className="font-fajila text-xl mt-4 text-[#5bafa5]">{item.item_name}</h3>
+      <h3 className="font-fajila text-xl mt-4 text-[#5bafa5]">{item_name}</h3>
       <div className="flex justify-between items-center mt-4">
         <p className="flex gap-3 items-center font-fajila text-[18px] "><GrMoney /> {price}</p>
         <p className="flex gap-3 items-center font-fajila text-[18px] text-[#5bafa5]"><GiTimeTrap /> {processing_time}</p>
@@ -23,7 +23,7 @@ const ArtAndCraftCard = ({item}) => {
         <p className="flex gap-3 items-center font-fajila text-[18px]  "> <SiShutterstock />{stockStatus}</p>
       </div>
       <div className="my-4 flex items-center justify-center">
-      <Link to={`/all-items/${_id}`} className="py-3 px-6 flex items-center gap-5 font-bold font-lobister text-xl hover:text-white hover:bg-[#5bafa5] rounded-lg border border-[#5bafa5]">View Details <FaLocationArrow /> </Link>
+      <Link to={`/artCollection/${_id}`} className="py-3 px-6 flex items-center gap-5 font-bold font-lobister text-xl hover:text-white hover:bg-[#5bafa5] rounded-lg border border-[#5bafa5]">View Details <FaLocationArrow /> </Link>
       </div>
     </div>
   );

@@ -51,10 +51,11 @@ const router = createBrowserRouter([
       element:<AllCraftSection></AllCraftSection>,
     },
     {
-      path:'/all-items:id',
+      path:`/artCollection/:id`,
       element:<PrivateRoute>
         <ItemDetails></ItemDetails>
-      </PrivateRoute>
+      </PrivateRoute>,
+      loader: ({params}) => fetch(`http://localhost:5000/artCollection/${params.id}`)
     }
     ]
   },
