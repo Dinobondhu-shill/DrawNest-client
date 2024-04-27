@@ -6,7 +6,7 @@ import { SiShutterstock } from "react-icons/si";
 import { FaLocationArrow } from "react-icons/fa6";
 
 const ArtAndCraftCard = ({item}) => {
-  const {image, item_name, price, processing_time, rating, stockStatus } = item
+  const {image, item_name, price, processing_time, rating, stockStatus, _id } = item
   return (
     <div className="border p-3 rounded-md hover:scale-105 ">
        
@@ -23,7 +23,7 @@ const ArtAndCraftCard = ({item}) => {
         <p className="flex gap-3 items-center font-fajila text-[18px]  "> <SiShutterstock />{stockStatus}</p>
       </div>
       <div className="my-4 flex items-center justify-center">
-      <Link className="py-3 px-6 flex items-center gap-5 font-bold font-lobister text-xl hover:text-white hover:bg-[#5bafa5] rounded-lg border border-[#5bafa5]">View Details <FaLocationArrow /> </Link>
+      <Link to={`/all-items/${_id}`} className="py-3 px-6 flex items-center gap-5 font-bold font-lobister text-xl hover:text-white hover:bg-[#5bafa5] rounded-lg border border-[#5bafa5]">View Details <FaLocationArrow /> </Link>
       </div>
     </div>
   );

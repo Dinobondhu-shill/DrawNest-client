@@ -14,6 +14,9 @@ import { HelmetProvider } from 'react-helmet-async'
 import FirebaseProvider from './firebase/FirebaseProvider.jsx'
 import PrivateRoute from './pages/PrivateRoute.jsx'
 import AddArtAndCraft from './pages/AddArtAndCraft.jsx'
+import MyArtAndCraftList from './pages/MyArtAndCraftList.jsx'
+import AllCraftSection from './pages/AllCraftSection.jsx'
+import ItemDetails from './pages/ItemDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,20 @@ const router = createBrowserRouter([
       path:"/add-item",
       element: <PrivateRoute>
       <AddArtAndCraft></AddArtAndCraft>
+      </PrivateRoute>
+    },
+    {
+      path:'/my-list',
+      element:<MyArtAndCraftList></MyArtAndCraftList>
+    },
+    {
+      path:'/all-items',
+      element:<AllCraftSection></AllCraftSection>,
+    },
+    {
+      path:'/all-items:id',
+      element:<PrivateRoute>
+        <ItemDetails></ItemDetails>
       </PrivateRoute>
     }
     ]

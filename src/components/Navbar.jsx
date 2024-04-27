@@ -7,7 +7,6 @@ const Navbar = () => {
 
   const { user, logOut } = useContext(AuthContext)
 
-console.log(user);
  const Navbar = <>
  <NavLink to={'/'}
   style={({ isActive,}) => {
@@ -17,7 +16,7 @@ console.log(user);
       
     };
   }}>Home</NavLink>
-  <NavLink to={'/'}
+  <NavLink to={'/all-items'}
   style={({ isActive,}) => {
     return {
       fontWeight: isActive ? "bold" : "",
@@ -36,7 +35,7 @@ console.log(user);
     }}>Add Craft Item</NavLink>
   }
   {
-    user && <NavLink to={'/'}
+    user && <NavLink to={'/my-list'}
     style={({ isActive,}) => {
       return {
         fontWeight: isActive ? "bold" : "",
