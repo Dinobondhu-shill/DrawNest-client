@@ -10,6 +10,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import photowave from '../../public/Wave.svg'
 import { AuthContext } from '../firebase/FirebaseProvider';
 import swal from 'sweetalert';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -51,6 +52,9 @@ const location = useLocation();
 
   return (
     <div className='relative'>
+       <Helmet>
+        <title>Login | DrawNest</title>
+      </Helmet>
       <img src={photowave} alt="" className='max-h-72 w-full rotate-180'/>
       <div className='bg-transparent absolute top-0 left-0 mx-52 mt-10 px-10 py-6 rounded-sm text-center'>
       <h2 className='font-dancing text-5xl py-3'>Welcome back to <span className='font-lobister text-7xl'>DrawNest</span></h2> <hr />

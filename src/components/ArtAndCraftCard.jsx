@@ -9,6 +9,7 @@ const ArtAndCraftCard = ({item}) => {
   const {image, item_name, price, processing_time, rating, stockStatus } = item
   return (
     <div className="border p-3 rounded-md hover:scale-105 ">
+       
       <div>
         <img src={image} alt="" className="w-full max-h-[300px] object-cover "/>
       </div>

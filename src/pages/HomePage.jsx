@@ -3,6 +3,7 @@ import NewsLetter from "../components/NewsLetter";
 import photo from '../../public/Wave.svg'
 import { useEffect, useState } from "react";
 import ArtAndCraftCard from "../components/ArtAndCraftCard";
+import { Helmet } from "react-helmet-async";
 
 
 const HomePage = () => {
@@ -15,6 +16,9 @@ useEffect(()=>{
 
   return (
     <div className="w-full mx-auto relative">
+       <Helmet>
+        <title>Home | DrawNest</title>
+      </Helmet>
 <div className="absolute -top-10 left-0 w-full">
 <img src={photo} alt="" className='max-h-72 w-full rotate-180'/>
   </div>

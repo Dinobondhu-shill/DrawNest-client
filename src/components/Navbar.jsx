@@ -49,7 +49,7 @@ console.log(user);
  </>
   
   return (
-    <div className="navbar bg-[#42C8C6] pt-5 px-24 font-lobister">
+    <div className="navbar bg-[#42C8C6] pt-8 px-24 font-lobister">
 
   <div className="flex-1">
     <Link to={"/"} className=" text-3xl  font-bold">Draw<span className="text-[#206463b1]">Nest</span></Link>
