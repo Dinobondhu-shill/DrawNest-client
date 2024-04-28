@@ -17,6 +17,7 @@ import AddArtAndCraft from './pages/AddArtAndCraft.jsx'
 import MyArtAndCraftList from './pages/MyArtAndCraftList.jsx'
 import AllCraftSection from './pages/AllCraftSection.jsx'
 import ItemDetails from './pages/ItemDetails.jsx'
+import UpdatePage from './pages/UpdatePage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
       element:<PrivateRoute>
         <ItemDetails></ItemDetails>
       </PrivateRoute>,
+      loader: ({params}) => fetch(`http://localhost:5000/artCollection/${params.id}`)
+    },
+    {
+      path:'/update/:id',
+      element:<UpdatePage></UpdatePage>,
       loader: ({params}) => fetch(`http://localhost:5000/artCollection/${params.id}`)
     }
     ]

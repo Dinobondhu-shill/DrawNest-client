@@ -20,11 +20,11 @@ useEffect(()=>{
         <title>Home | DrawNest</title>
       </Helmet>
 <div className="absolute -top-10 left-0 w-full">
-<img src={photo} alt="" className='max-h-72 w-full rotate-180'/>
+<img src={photo} alt="" className='max-h-40 md:max-h-72 w-full rotate-180'/>
   </div>
   <Banner></Banner>
       <NewsLetter></NewsLetter>
-      <div className="px-24 my-10 ">
+      <div className="px-2 md:px-10 lg:px-24 mb-10 mt-16 ">
         <h3 className="font-extrabold text-5xl font-fajila border-b-2 w-fit pb-3 text-[#5bafa5]">Browse Our Collection</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
       {
@@ -32,7 +32,7 @@ useEffect(()=>{
       }
       </div>
       </div>
-      <img src={photo} alt="" className='max-h-72 w-full'/>
+      <img src={photo} alt="" className='max-h-40 md:max-h-72 w-full'/>
     </div>
   );
 };

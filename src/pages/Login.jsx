@@ -56,11 +56,11 @@ const location = useLocation();
         <title>Login | DrawNest</title>
       </Helmet>
       <img src={photowave} alt="" className='max-h-72 w-full rotate-180'/>
-      <div className='bg-transparent absolute top-0 left-0 mx-52 mt-10 px-10 py-6 rounded-sm text-center'>
+      <div className='bg-transparent md:absolute top-0 left-0 md:mx-20 lg:mx-52 mt-10 px-10 py-6 rounded-sm text-center'>
       <h2 className='font-dancing text-5xl py-3'>Welcome back to <span className='font-lobister text-7xl'>DrawNest</span></h2> <hr />
-      <div className='my-10 flex justify-between w-full'> 
+      <div className='my-10 flex flex-wrap md:flex-nowrap  md:justify-between w-full'> 
         <img src={photo} alt="" />
-        <div className='border-l ml-20 flex flex-col w-1/2 pl-16'>
+        <div className='lg:border-l lg:ml-20 flex flex-col w-full md:w-1/2 lg:pl-16'>
         <form
         onSubmit={handleSubmit(onSubmit)}
 className=" flex flex-col gap-3">

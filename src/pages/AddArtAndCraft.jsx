@@ -65,14 +65,14 @@ return (
   <Helmet>
     <title>Add Your Craft Item | DrawNest</title>
   </Helmet>
-  <div className="px-24 py-5 w-full flex items-center justify-center ">
+  <div className="px-4 md:px-10 lg:px-24 py-5 w-full flex items-center justify-center ">
     <h2 className=" text-3xl font-fajila">Do you want to Add Item? </h2>
     <Lottie loop={true} animationData={flower} className="w-40" />
   </div>
 
   {/* form handle */}
 
-  <div className="px-24">
+  <div className="px-4 md:px-10 lg:px-24">
     <form onSubmit={handleAddItem}>
       {/* form row-1 */}
       <div className="w-full flex gap-5">

@@ -15,7 +15,7 @@ const MyArtAndCraftList = () => {
       <Helmet>
         <title>My Added Items | DrawNest</title>
       </Helmet>
-      <div className="px-24 relative -top-60 left-0">
+      <div className="px-4 md:px-10 lg:px-24 relative -top-60 left-0">
       <div className="my-10">
        <h2 className="text-3xl font-bold font-lobister">Hello, Here is your Added Item .</h2>
        </div> 

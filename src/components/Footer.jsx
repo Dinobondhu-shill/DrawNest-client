@@ -3,10 +3,10 @@ import video from '../../public/drawing.mp4'
 const Footer = () => {
   return (
     <div className='bg-[#42C8C6]'>
-      <footer className="footer p-10 flex justify-between font-fajila">
+      <footer className="footer p-10 flex flex-wrap justify-center md:justify-between font-fajila">
   <aside>
     
-    <p className="font-lobister text-2xl"> <span className="font-dancing text-7xl">DrawNest</span> Ltd.<br/>Providing reliable ideas since 1992</p>
+    <p className="font-lobister text-2xl flex-grow"> <span className="font-dancing text-7xl">DrawNest</span> Ltd.<br/>Providing reliable ideas since 1992</p>
   </aside> 
   <nav className="mt-4">
     <h6 className="footer-title">Services</h6> 

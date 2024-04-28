@@ -13,11 +13,11 @@ const ItemDetails = () => {
   return (
     <div className="">
       <img src={photo} alt="" className='max-h-40 w-full rotate-180 relative top-0 left-0'/>
-      <div className="mx-24 px-4 py-2 flex  gap-10 border rounded-xl">
-        <div className="w-1/3 border-r-2">
+      <div className="lg:mx-24 md:mx-10 px-4 py-2 flex flex-col items-center md:flex-row  gap-10 border rounded-xl">
+        <div className="w-1/3 md:border-r-2">
         <img src={image} className="max-h-96 rounded-xl" alt="" />
         </div>
-        <div className="border-l-2 px-5 w-2/3">
+        <div className="md:border-l-2 px-5 w-full md:w-2/3">
         <h3 className="font-fajila text-center text-2xl mt-4 text-[#5bafa5]">{item_name}</h3>
         <div className="flex items-center justify-between mt-3 pb-4 mt-5 border-b-2 border-dashed">
         <p className="flex gap-3 items-center font-fajila text-[18px] text-[#5bafa5]"> <IoStarHalf /> {rating}</p>
