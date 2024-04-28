@@ -26,7 +26,7 @@ const ItemDetails = () => {
       <p className="font-lobister text-2xl mb-4 text-[#0a1717] border-b-2 w-fit">{subcategory_Name}</p>
       <p className="font-lobister text-2xl text-[#42C8C6]">{short_description}</p>
       <div className="flex justify-between items-center mt-4 border-t-2 border-dotted pt-4">
-        <p className="flex gap-3 items-center font-fajila text-[18px] "><GrMoney /> {price}</p>
+        <p className="flex gap-3 items-center font-fajila text-[18px] "><GrMoney /> {price} Tk.</p>
         <p className="flex gap-3 items-center font-fajila text-[18px] text-[#5bafa5]"><GiTimeTrap /> {processing_time}</p>
       </div>
       <div className="my-5 flex justify-end">
