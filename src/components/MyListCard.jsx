@@ -2,14 +2,18 @@ import { GiTimeTrap } from "react-icons/gi";
 import { GrMoney } from "react-icons/gr";
 import { IoStarHalf } from "react-icons/io5";
 import { SiShutterstock } from "react-icons/si";
+import { MdDelete } from "react-icons/md";
+import { CiEdit } from "react-icons/ci";
 
 
 const MyListCard = ({data}) => {
   const {image, item_name, price, processing_time, rating, stockStatus, _id, User_Name, short_description
     , subcategory_Name} = data
   return (
-    <div className="px-24 mt-5">
-     <div className="">
+    <div className=" my-5">
+     
+     <div >
+     
       <div className="px-4 py-2 flex  gap-10 border-y-2 border-[#5bafa5] rounded-xl">
         <div className="w-1/5 border-r-2 flex items-center justify-center">
         <img src={image} className="max-h-40 rounded-xl" alt="" />
@@ -26,9 +30,11 @@ const MyListCard = ({data}) => {
         <p className="flex gap-3 items-center font-fajila text-[18px] text-[#5bafa5]"><GiTimeTrap /> {processing_time}</p>
       </div>
         </div>
-        <div className="flex flex-col justify-center items-center w-1/6 border-l-2">
-          <button>delete</button>
-          <button>update</button>
+        <div className="flex flex-col gap-5 justify-center items-center w-1/6 border-l-2">
+          <button data-tip="Delete" className="w-16 tooltip h-16 text-3xl flex items-center justify-center  border rounded"><MdDelete /></button>
+         
+          <button data-tip="Update" className="w-16 h-16 tooltip tooltip-bottom text-3xl flex items-center justify-center  border rounded"><CiEdit/></button>
+          
         </div>
       </div>
     
