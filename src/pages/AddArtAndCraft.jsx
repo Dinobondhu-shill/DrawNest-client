@@ -148,14 +148,14 @@ return (
       <div className="w-full flex gap-5">
         <div className="mb-2 w-1/2">
           <h5 className="font-bold text-lg pl-2">User Name:</h5>
-          <input type="text" name="email" disabled defaultValue={user?.displayName} placeholder="Enter Item Name"
+          <input type="text" name="userName" disabled defaultValue={user?.displayName} placeholder="Enter Item Name"
             className="input input-bordered w-full" />
            
         </div>
         
         <div className="mb-2 w-1/2">
           <h5 className="font-bold text-lg pl-2">User Email:</h5>
-          <input disabled name="userName" type="text" defaultValue={user?.email} placeholder="Enter Item Name"
+          <input disabled name="email" type="text" defaultValue={user?.email} placeholder="Enter Item Name"
             className="input input-bordered w-full" />
             
         </div>

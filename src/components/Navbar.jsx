@@ -35,7 +35,7 @@ const Navbar = () => {
     }}>Add Craft Item</NavLink>
   }
   {
-    user && <NavLink to={`/artCollectionbyEmail/${user.email}`}
+    user &&  <NavLink to={`/artCollection/email/${user.email}`}
     style={({ isActive,}) => {
       return {
         fontWeight: isActive ? "bold" : "",

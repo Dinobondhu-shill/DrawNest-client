@@ -43,9 +43,9 @@ const router = createBrowserRouter([
       </PrivateRoute>
     },
     {
-      path:'/artCollectionbyEmail/:email',
+      path:'/artCollection/email/:email',
       element:<MyArtAndCraftList></MyArtAndCraftList>, 
-      loader: ({params}) => fetch(`http://localhost:5000/artCollectionbyEmail/${params.email}`)
+      loader: ({params}) =>fetch(`http://localhost:5000/artCollection/email/${params?.email}`)
     },
     
     {

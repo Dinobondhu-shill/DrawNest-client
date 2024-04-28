@@ -29,7 +29,8 @@ const ItemDetails = () => {
         <p className="flex gap-3 items-center font-fajila text-[18px] "><GrMoney /> {price} Tk.</p>
         <p className="flex gap-3 items-center font-fajila text-[18px] text-[#5bafa5]"><GiTimeTrap /> {processing_time}</p>
       </div>
-      <div className="my-5 flex justify-end">
+      <div className="my-5 flex item-center justify-between">
+        <h3 className="font-bold mt-2">Added By: {User_Name}</h3>
       <Link className="py-3 px-6 w-fit flex items-center gap-5 font-bold font-lobister text-xl hover:text-white hover:bg-[#5bafa5] rounded-lg border border-[#5bafa5]">Purchase Now <FaLocationArrow /> </Link>
         </div>
         </div>
