@@ -18,18 +18,21 @@ const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [registerError, setRegisterError] = useState('');
     const [successRegister, setSuccessRegister] = useState('')
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUserProfile} = useContext(AuthContext);
   
     const password = watch("Password");
     const onSubmit = data =>{
-      console.log(data.email);
       createUser(data.email, data.Password)
       .then(user =>{
         setSuccessRegister('User Created Successfully')
       toast.success('Register Successful')
       swal("Registration Successfull");
-      
-      navigate('/')
+      updateUserProfile(data.fullName, data.photoURL)
+      console.log(data.email, data.photoURL)
+        .then(()=>{
+          navigate('/')
+          
+      })
       })
       .catch((error)=>{
         setRegisterError("Something went wrong")
