@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "John Smith",
+    "email": "john@example.com",
+    "phone": "+1234567890",
+    "photo": "https://i.postimg.cc/TYbb850B/64.jpg",
+    "bio": "With each stroke of the pencil or sweep of the brush, this artist weaves tales of emotion and narrative. Their work transcends mere images, evoking profound emotions and sparking introspection. Through their art, they invite viewers into worlds both familiar and fantastical, leaving an indelible imprint on the imagination.",
+    "specialties": ["Residential Sales", "Commercial Leasing"]
+  },
+  {
+    "id": 2,
+    "name": "Emily Johnson",
+    "email": "emily@example.com",
+    "phone": "+1987654321",
+    "photo": "https://i.postimg.cc/t4Hx9RmJ/agent-1-150x150.jpg",
+    "bio": "Pushing the boundaries of traditional artistry, this individual explores new techniques and mediums with boundless curiosity. Their avant-garde approach challenges conventional norms, inviting viewers to reconsider the very essence of art. With a fearless spirit, they fearlessly pioneer the future of visual expression",
+    "specialties": ["First-Time Homebuyers", "Investment Properties"]
+  },
+  {
+    "id": 3,
+    "name": "Michael Davis",
+    "email": "michael@example.com",
+    "phone": "+1122334455",
+    "photo": "https://i.postimg.cc/pdW5nGvt/client-1.jpg",
+    "bio": "This artist possesses a rare gift for capturing the essence of their subjects, revealing the innermost depths of the human experience. Through their keen observation and empathetic insight, they uncover beauty in the mundane and truth in the abstract. Their work serves as a mirror to the soul, reflecting the universal truths that unite us all",
+    "specialties": ["Property Management", "Investment Properties"]
+  },
+  {
+    
+    "id": 4,
+    "name": "Sarah Brown",
+    "email": "sarah@example.com",
+    "phone": "+1555666777",
+    "photo": "https://i.postimg.cc/3xCDNMPB/Artboard-2team-150x150.jpg",
+    "bio": "A master of the brushstroke, this individual effortlessly translates imagination onto canvas, infusing life into every stroke. With an intuitive understanding of color, form, and composition, they breathe soul into their creations, captivating audiences with their expressive artistry",
+    "specialties": ["Luxury Homes", "Interior Design Consultation"]
+  }
+]

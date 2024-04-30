@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ArtAndCraftCard from "../components/ArtAndCraftCard";
 import { Helmet } from "react-helmet-async";
 import CategoryCard from "../components/CategoryCard";
+import About from "../components/About";
 
 
 const HomePage = () => {
@@ -43,7 +44,7 @@ useEffect(()=>{
       </div>
       </div>
       </div>
-
+      <div className="px-2 md:px-10 lg:px-24 mb-10 mt-16 "><About></About></div>
       <NewsLetter></NewsLetter>
       <img src={photo} alt="" className='max-h-40 md:max-h-72 w-full'/>
     </div>
