@@ -24,7 +24,7 @@ const UpdatePage = () => {
   
   const item = {item_name, customization, category, User_Email, User_Name, rating, price, short_description, subcategory_Name, processing_time, stockStatus, image}
   console.log(item)
-  fetch(`http://localhost:5000/artCollection/${_id}`,
+  fetch(`https://drawnest-sever.vercel.app/artCollection/${_id}`,
   {
     method: "PUT",
     headers:{
@@ -82,12 +82,12 @@ const UpdatePage = () => {
         <div className="mb-2 w-1/2">
           <h5 className="font-bold text-lg pl-2">Category:</h5>
           <select name="category" className="select select-bordered w-full">
-            <option value="Landscape Painting">Landscape Painting</option>
-            <option value="Portrait Drawing">Portrait Drawing</option>
-            <option value="Watercolour Painting">Watercolour Painting</option>
-            <option value="Oil Painting">Oil Painting</option>
-            <option value="Charcoal Sketching">Charcoal Sketching</option>
-            <option value="Cartoon Drawing">Cartoon Drawing</option>
+            <option value="Landscape-Painting">Landscape Painting</option>
+            <option value="Portrait-Drawing">Portrait Drawing</option>
+            <option value="Watercolour-Painting">Watercolour Painting</option>
+            <option value="Oil-Painting">Oil Painting</option>
+            <option value="Charcoal-Sketching">Charcoal Sketching</option>
+            <option value="Cartoon-Drawing">Cartoon Drawing</option>
           </select>
 
         </div>

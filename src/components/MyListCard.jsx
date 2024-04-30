@@ -23,7 +23,7 @@ cancelButtonColor: "#d33",
 confirmButtonText: "Yes, delete it!"
 }).then((result) => {
 if (result.isConfirmed) {
-fetch(`http://localhost:5000/artCollection/${_id}`,
+fetch(`https://drawnest-sever.vercel.app/artCollection/${_id}`,
 {
 method:"DELETE",
 

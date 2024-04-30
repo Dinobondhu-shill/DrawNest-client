@@ -10,7 +10,7 @@ import CategoryCard from "../components/CategoryCard";
 const HomePage = () => {
   const [artCollection, setArtCollection] = useState([])
 useEffect(()=>{
-  fetch('http://localhost:5000/artCollection')
+  fetch('https://drawnest-sever.vercel.app/artCollection')
   .then(res=> res.json())
   .then(data=> setArtCollection(data))
 },[])

@@ -63,7 +63,7 @@ To get started with this project, follow these steps:
 
 
 
-5. Open your browser and navigate to http://localhost:5000 to view the application.
+5. Open your browser and navigate to https://drawnest-sever.vercel.app to view the application.
 
 
 ## Usage

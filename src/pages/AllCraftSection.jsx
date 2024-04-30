@@ -8,7 +8,7 @@ const AllCraftSection = () => {
 
 
   useEffect(()=>{
-    fetch('http://localhost:5000/artCollection')
+    fetch('https://drawnest-sever.vercel.app/artCollection')
     .then(res=> res.json())
     .then(data => setItems(data))
   }, [])

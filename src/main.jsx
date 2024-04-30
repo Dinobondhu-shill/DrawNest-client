@@ -18,6 +18,8 @@ import MyArtAndCraftList from './pages/MyArtAndCraftList.jsx'
 import AllCraftSection from './pages/AllCraftSection.jsx'
 import ItemDetails from './pages/ItemDetails.jsx'
 import UpdatePage from './pages/UpdatePage.jsx'
+import CategoryCard from './components/CategoryCard.jsx'
+import CategoryDetailsSection from './pages/CategoryDetailsSection.jsx'
 
 const router = createBrowserRouter([
   {
@@ -48,7 +50,7 @@ const router = createBrowserRouter([
       element:<PrivateRoute>
         <MyArtAndCraftList></MyArtAndCraftList>
       </PrivateRoute>, 
-      loader: ({params}) =>fetch(`http://localhost:5000/artCollection/email/${params?.email}`)
+      loader: ({params}) =>fetch(`https://drawnest-sever.vercel.app/artCollection/email/${params?.email}`)
     },
     
     {
@@ -60,14 +62,19 @@ const router = createBrowserRouter([
       element:<PrivateRoute>
         <ItemDetails></ItemDetails>
       </PrivateRoute>,
-      loader: ({params}) => fetch(`http://localhost:5000/artCollection/${params.id}`)
+      loader: ({params}) => fetch(`https://drawnest-sever.vercel.app/artCollection/${params.id}`)
     },
     {
       path:'/update/:id',
       element:<PrivateRoute>
         <UpdatePage></UpdatePage>
       </PrivateRoute>,
-      loader: ({params}) => fetch(`http://localhost:5000/artCollection/${params.id}`)
+      loader: ({params}) => fetch(`https://drawnest-sever.vercel.app/artCollection/${params.id}`)
+    },
+    {
+      path: '/artCollection/category/:category',
+      element: <CategoryDetailsSection></CategoryDetailsSection>,
+      loader: ({params})=> fetch(`https://drawnest-sever.vercel.app/artCollection/category/${params.Category}`)
     }
     ]
   },

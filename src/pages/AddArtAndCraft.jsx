@@ -36,7 +36,7 @@ const item = {item_name, customization, User_Email, User_Name, rating, price, sh
 subcategory_Name, processing_time, stockStatus, image}
 
 
-fetch('http://localhost:5000/artCollection',
+fetch('https://drawnest-sever.vercel.app/artCollection',
 {
 method: "POST",
 headers:{
