@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import MyListCard from "../components/MyListCard";
 import photo from '../../public/Wave.svg'
+import { FaChevronDown } from "react-icons/fa6";
 
 const MyArtAndCraftList = () => {
   const mydata = useLoaderData();
@@ -12,6 +13,15 @@ const MyArtAndCraftList = () => {
       <div className=" w-full">
 <img src={photo} alt="" className='max-h-72 w-full rotate-180'/>
   </div>
+  <div className="dropdown  px-4 md:px-10 lg:px-24 relative -top-60 left-1/3">
+      <div tabIndex={0} role="button" className="btn m-1 text-white font-bold hover:bg-[#42C8C6] bg-[#42C8C6]">Sort by
+        <FaChevronDown />
+      </div>
+      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2  shadow bg-[#42C8C6] rounded-box w-44 text-center">
+        <li><a>Yes</a></li>
+        <li><a>No</a></li>
+      </ul>
+    </div>
       <Helmet>
         <title>My Added Items | DrawNest</title>
       </Helmet>

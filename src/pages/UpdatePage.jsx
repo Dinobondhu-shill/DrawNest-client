@@ -14,15 +14,15 @@ const UpdatePage = () => {
   const User_Email = form.email.value;
   const User_Name = form.userName.value;
   const rating = form.rating.value;
-  const price = form.rating.value;
+  const price = form.price.value;
   const subcategory_Name = form.subCategory.value;
   const short_description = form.description.value;
   const processing_time = form.time.value;
   const stockStatus = form.status.value;
-  const image = form.image.value
+  const image = form.image.value;
+  const category = form.category.value
   
-  
-  const item = {item_name, customization, User_Email, User_Name, rating, price, short_description, subcategory_Name, processing_time, stockStatus, image}
+  const item = {item_name, customization, category, User_Email, User_Name, rating, price, short_description, subcategory_Name, processing_time, stockStatus, image}
   console.log(item)
   fetch(`http://localhost:5000/artCollection/${_id}`,
   {
@@ -73,6 +73,25 @@ const UpdatePage = () => {
                   </div>
 
                 </div>
+                <div className="w-full  flex gap-5">
+        <div className="mb-2 w-1/2">
+          <h5 className="font-bold text-lg pl-2">PhotoURL:</h5>
+          <input type="text" name="image" defaultValue={image} placeholder="Enter Item Name" className="input input-bordered w-full" />
+
+        </div>
+        <div className="mb-2 w-1/2">
+          <h5 className="font-bold text-lg pl-2">Category:</h5>
+          <select name="category" className="select select-bordered w-full">
+            <option value="Landscape Painting">Landscape Painting</option>
+            <option value="Portrait Drawing">Portrait Drawing</option>
+            <option value="Watercolour Painting">Watercolour Painting</option>
+            <option value="Oil Painting">Oil Painting</option>
+            <option value="Charcoal Sketching">Charcoal Sketching</option>
+            <option value="Cartoon Drawing">Cartoon Drawing</option>
+          </select>
+
+        </div>
+      </div>
                 {/* form row-2 */}
                 <div className="w-full flex gap-5">
                   <div className="mb-2 w-1/2">
@@ -141,18 +160,9 @@ const UpdatePage = () => {
                   </div>
 
                 </div>
-                {/* form row-5 */}
-                <div className="w-full">
-                  <div className="mb-2">
-                    <h5 className="font-bold text-lg pl-2">PhotoURL:</h5>
-                    <input type="text" name="image" defaultValue={image} placeholder="Enter Item Name"
-                      className="input input-bordered w-full" />
-
-                  </div>
-
-                </div>
+              
                 
-                  <button type="submit" className="btn block" 
+                  <button type="submit" className="btn btn-block my-5" 
                     data-tip="Update" >update</button>
                 
               </form>

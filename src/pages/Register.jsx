@@ -28,7 +28,6 @@ const Register = () => {
       toast.success('Register Successful')
       swal("Registration Successfull");
       updateUserProfile(data.fullName, data.photoURL)
-      console.log(data.email, data.photoURL)
         .then(()=>{
           navigate('/')
           
