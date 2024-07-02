@@ -51,19 +51,24 @@ To get started with this project, follow these steps:
 1. Clone this repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/programming-hero-web-course-4/B9A10-client-side-Dinobondhu-shill
-
+   git clone https://github.com/Dinobondhu-shill/DrawNest-client
+```
+```bash
+cd DrawNest-client
+npm install
+npm run dev
+```
 2. Open your browser and navigate to http://localhost:5173 to view the application.
 
 3. Clone this repository to your local machine using for server side the following command:
 
    ```bash
-   git clone https://github.com/programming-hero-web-course-4/b9a10-server-side-Dinobondhu-shill
+   git clone https://github.com/Dinobondhu-shill/DrawNest-client
+```
 
 
 
-
-5. Open your browser and navigate to https://drawnest-sever.vercel.app to view the application.
+5. Open your browser and navigate to https://localhost/5000 to view the application.
 
 
 ## Usage
