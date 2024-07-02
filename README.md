@@ -57,14 +57,15 @@ To get started with this project, follow these steps:
 cd DrawNest-client
 npm install
 npm run dev
+
 ```
 2. Open your browser and navigate to http://localhost:5173 to view the application.
 
 3. Clone this repository to your local machine using for server side the following command:
 
    ```bash
-   git clone https://github.com/Dinobondhu-shill/DrawNest-client
-```
+   git clone https://github.com/Dinobondhu-shill/DrawNest-server
+    ```
 
 
 
